@@ -1,0 +1,60 @@
+BODY {
+	min-width: 60em
+}
+#header {
+	DISPLAY: inline-block; OVERFLOW: hidden
+}
+#content {
+	/*DISPLAY: inline-block; OVERFLOW: hidden
+	border: 1px solid #DBDB79;
+    padding: 15px;
+    margin-bottom: 10px;*/
+    /*background: #FEFFAB; url(images/background_columnright.gif) repeat-y;*/
+    /*position: relative;*/
+	/*position:relative; */
+    width:80%;
+	
+}
+/*#content2 {
+	DISPLAY: inline-block; OVERFLOW: hidden
+}*/
+#sidebar {
+	DISPLAY: inline-block; OVERFLOW: hidden
+}
+#footer {
+	DISPLAY: inline-block; OVERFLOW: hidden
+}
+#header {
+	WIDTH: 100%
+}
+#footer {
+	WIDTH: 100%
+}
+#header {
+	FLOAT: left
+}
+#sidebar {
+	FLOAT: left
+}
+
+
+#wrapper {
+	/*FLOAT: left; WIDTH: 100%*/
+	margin-left: 185px;
+}
+/*#content {
+	margin-left: 185px;
+}*/
+#sidebar {
+	/*FLOAT: left;
+	/*margin-top: 2px;*/
+	/*MARGIN-LEFT: -110%;*/
+	/*WIDTH: 15em*/
+	float: left;
+    width: 180px;
+}
+
+
+#footer {
+	CLEAR: both
+}

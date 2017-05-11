@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/">
+  <xs:complexType name="ArrayOfPersonaInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonaInfo" nillable="true" type="tns:PersonaInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonaInfo" nillable="true" type="tns:ArrayOfPersonaInfo"/>
+  <xs:complexType name="PersonaInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodEntidad" type="xs:int"/>
+      <xs:element minOccurs="0" name="FechaAcreditacion" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Materno" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NombreCompleto" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NroIdentificacion" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Paterno" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="codAcreditacion" type="xs:int"/>
+      <xs:element minOccurs="0" name="codcategoria" type="xs:int"/>
+      <xs:element minOccurs="0" name="codpersona" type="xs:int"/>
+      <xs:element minOccurs="0" name="fechacese" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="nombres" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonaInfo" nillable="true" type="tns:PersonaInfo"/>
+  <xs:complexType name="ArrayOfEntidadInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntidadInfo" nillable="true" type="tns:EntidadInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntidadInfo" nillable="true" type="tns:ArrayOfEntidadInfo"/>
+  <xs:complexType name="EntidadInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="CODCONTACTO" type="xs:int"/>
+      <xs:element minOccurs="0" name="CONTACTO" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntidadInfo" nillable="true" type="tns:EntidadInfo"/>
+</xs:schema>

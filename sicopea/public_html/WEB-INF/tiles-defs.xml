@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+<tiles-definitions>
+
+  <definition name="ser.page" path="/layout/PageLayout.jsp">
+    <put name="title" value="SARA"/>
+    <put name="jscript" value=""/>
+    <put name="header" value="/layout/Header.jsp"/>
+    <put name="content" value="/layout/Blank.jsp"/>
+    <put name="footer" value="/layout/Blank.jsp"/>
+  </definition>
+
+  <definition name="ser.classic" path="/layout/ClassicLayout.jsp">
+    <put name="title" value="SICOPEA"/>
+    <put name="jscript" value=""/>
+    <put name="header" value="/layout/Header.jsp"/>
+    <put name="content" value="/layout/Blank.jsp"/>
+    <put name="sidebar" value="/layout/Blank.jsp"/>
+    <put name="footer" value="/layout/Blank.jsp"/>
+  </definition>
+  
+  <definition name="ser.reporte" path="/layout/RepLayout.jsp">
+    <put name="title" value="SICOPEA"/>
+    <put name="content" value="/layout/Blank.jsp"/>
+  </definition>
+
+  <definition name="ser.home" extends="ser.classic">
+    <put name="sidebar" value="/layout/MenuLayout.jsp"/>
+    <put name="content" value="/inicio.jsp"/>
+  </definition>
+
+  <definition name="sca.reg.inf" extends="ser.home">
+    <put name="jscript" value="jscript/reginf.js"/>
+    <put name="content" value="/reginf.jsp"/>
+  </definition>
+
+  <definition name="sca.reg.inf" extends="ser.home">
+    <put name="jscript" value="jscript/reginf.js"/>
+    <put name="content" value="/reginf.jsp"/>
+  </definition>
+  <definition name="sca.reg.inf2" extends="ser.home">
+    <put name="jscript" value="jscript/reginf.js"/>
+    <put name="content" value="/reginf2.jsp"/>
+  </definition>
+  
+  <definition name="sca.mod.acr" extends="ser.home">
+    <put name="jscript" value="jscript/modacr.js"/>
+    <put name="content" value="/modacr.jsp"/>
+  </definition>
+  <definition name="sca.mod.ent" extends="ser.home">
+    <put name="jscript" value="jscript/modacr.js"/>
+    <put name="content" value="/modent.jsp"/>
+  </definition>
+  <definition name="sca.con.acr" extends="ser.home">
+    <put name="jscript" value="jscript/modacr.js"/>
+    <put name="content" value="/conacr.jsp"/>
+  </definition>
+  <definition name="sca.con.acr2" extends="ser.home">
+    <put name="jscript" value="jscript/modacr.js"/>
+    <put name="content" value="/conacr2.jsp"/>
+  </definition>
+  <definition name="sca.reg.ent" extends="ser.home">
+    <put name="jscript" value="jscript/reginf.js"/>
+    <put name="content" value="/regent.jsp"/>
+  </definition>  
+  <definition name="sca.cam.usu" extends="ser.home">
+    <put name="jscript" value="jscript/reginf.js"/>
+    <put name="content" value="/UsuarioCambio.jsp"/>
+  </definition>  
+  <definition name="sca.eli.acr" extends="ser.home">
+    <put name="jscript" value="jscript/reginf.js"/>
+    <put name="content" value="/eliacr.jsp"/>
+  </definition>  
+  <definition name="sca.mod.acra" extends="ser.home">
+    <put name="jscript" value="jscript/modacr.js"/>
+    <put name="content" value="/modacr_asc.jsp"/>
+  </definition>
+  <definition name="sca.mod.acrc" extends="ser.home">
+    <put name="jscript" value="jscript/modacr.js"/>
+    <put name="content" value="/modacr_cese.jsp"/>
+  </definition>
+  
+  <definition name="sca.imp.acr" extends="ser.reporte">
+    <put name="content" value="/impacr.jsp"/>
+  </definition>
+  <definition name="sca.imp.acr2" extends="ser.reporte">
+    <put name="content" value="/impacr2.jsp"/>
+  </definition>
+  
+</tiles-definitions>

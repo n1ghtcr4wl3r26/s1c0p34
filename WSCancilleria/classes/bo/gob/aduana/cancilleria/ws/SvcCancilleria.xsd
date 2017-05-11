@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="SvcCancilleria_1.xsd" namespace="http://schemas.datacontract.org/2004/07/"/>
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDirectorio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="codigo" type="xs:int"/>
+        <xs:element minOccurs="0" name="inicio" type="xs:int"/>
+        <xs:element minOccurs="0" name="cantidad" type="xs:int"/>
+        <xs:element minOccurs="0" name="total" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDirectorioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDirectorioResult" nillable="true" type="q1:ArrayOfEntidadInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/"/>
+        <xs:element minOccurs="0" name="total" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAcreditados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dni" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="inicio" type="xs:int"/>
+        <xs:element minOccurs="0" name="cantidad" type="xs:int"/>
+        <xs:element minOccurs="0" name="total" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAcreditadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getAcreditadosResult" nillable="true" type="q2:ArrayOfPersonaInfo" xmlns:q2="http://schemas.datacontract.org/2004/07/"/>
+        <xs:element minOccurs="0" name="total" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,6 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://www.rree.gob.bo/WsAduana/ConsultaService.svc?wsdl#%7Bhttp%3A%2F%2Ftempuri.org%2F%7DPersonas"
+          uri="../bo/gob/rree/ws/Personas.wsdl"/>
+  <system systemId="http://10.0.2.78:14876/cancilleria/SvcCancilleria.svc?wsdl#%7Bhttp%3A%2F%2Ftempuri.org%2F%7DSvcCancilleria"
+          uri="../bo/gob/aduana/cancilleria/ws/SvcCancilleria.wsdl"/>
+</catalog>

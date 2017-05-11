@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="ConsultaService_1.xsd" namespace="http://schemas.datacontract.org/2004/07/"/>
+  <xs:element name="GetAcreditados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Dni" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="NombreCompleto" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="Inicio" type="xs:int"/>
+        <xs:element minOccurs="0" name="Cantidad" type="xs:int"/>
+        <xs:element minOccurs="0" name="Total" type="xs:int"/>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="Pass" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAcreditadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAcreditadosResult" nillable="true" type="q1:ArrayOfPersonaInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/"/>
+        <xs:element minOccurs="0" name="Total" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDirectorio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="Codigo" type="xs:int"/>
+        <xs:element minOccurs="0" name="Inicio" type="xs:int"/>
+        <xs:element minOccurs="0" name="Cantidad" type="xs:int"/>
+        <xs:element minOccurs="0" name="Total" type="xs:int"/>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="Pass" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDirectorioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDirectorioResult" nillable="true" type="q2:ArrayOfEntidadInfo" xmlns:q2="http://schemas.datacontract.org/2004/07/"/>
+        <xs:element minOccurs="0" name="Total" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,53 @@
+.bselect {
+	font-size: 1px;
+	color: #A9A9A9;
+	background-image: url(Select.jpg);
+	height: 26px;
+	width: 92px;
+	
+}
+
+TD.cat {
+	FONT-WEIGHT: bold; BACKGROUND: url(cellpic1.gif) #d9e2ec; COLOR: #516a88; TEXT-INDENT: 4px; LETTER-SPACING: 1px; HEIGHT: 26px
+}
+.row1 {
+	BACKGROUND: #f4f6fb;
+	font-size:9px;
+}
+.row2 {
+	BACKGROUND: #e1e9f2
+}
+.helpline {
+	BACKGROUND: #e1e9f2
+}
+.row3 {
+	BACKGROUND: #d7e2ef
+}
+.row4 {
+	BACKGROUND: #c7d6e7
+}
+.row5 {
+	BACKGROUND: #FFFF95
+}
+.row6 {
+	BACKGROUND: #FF8282
+}
+TD.spacerow {
+	BACKGROUND: #cad9ea
+}
+TD.rowpic {
+	BACKGROUND: url(/images/cellpic2.jpg) #ffffff repeat-y
+}
+TH {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: url(/images/cellpic3.gif) #c6d3e4; COLOR: #516a88; WHITE-SPACE: nowrap; HEIGHT: 27px; TEXT-ALIGN: center
+}
+.forumline {
+	BORDER-RIGHT: #486386 1px solid; BORDER-TOP: #486386 1px solid; BACKGROUND: #ffffff; BORDER-LEFT: #486386 1px solid; BORDER-BOTTOM: #486386 1px solid
+}
+.maintitle {
+	FONT: bold 20px/120% "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; COLOR: #839fbc; TEXT-DECORATION: none
+}
+.maintitle2 {
+	FONT: bold 14px/120% "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; COLOR: #839fbc; TEXT-DECORATION: none
+}
+

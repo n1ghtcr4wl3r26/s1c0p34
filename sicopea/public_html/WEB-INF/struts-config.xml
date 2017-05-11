@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="inputActionForm" type="sicopea.inputActionForm"/>
+    <form-bean name="beanMenu" type="sicopea.MenuForm"/>
+    <form-bean name="reginfForm" type="sicopea.reginfForm"/>
+    <form-bean name="reginf2Form" type="sicopea.reginf2Form"/>
+    <form-bean name="modacrForm" type="sicopea.modacrForm"/>    
+    <form-bean name="conacrForm" type="sicopea.conacrForm"/>
+    <form-bean name="conacr2Form" type="sicopea.conacr2Form"/>    
+    <form-bean name="regentForm" type="sicopea.regentForm"/>
+    <form-bean name="eliacrForm" type="sicopea.eliacrForm"/>
+    <form-bean name="impacrForm" type="sicopea.impacrForm"/>
+    <form-bean name="impacr2Form" type="sicopea.impacr2Form"/>
+    <form-bean name="mensajeForm" type="sicopea.mensajeForm"/>
+    <form-bean name="modentForm" type="sicopea.modentForm"/>
+    <form-bean name="CambioForm" type="sicopea.CambioForm"/>
+  </form-beans>
+  <global-forwards>
+    <forward name="ser.home" path="/ini.do"/>
+    <forward name="reg.inf" path="/registro.do"/> 
+    <forward name="reg.inf2" path="/registro2.do"/>
+    <forward name="mod.acr" path="/modifacr.do"/> 
+    <forward name="con.acr" path="/consulacr.do"/> 
+    <forward name="con.acr2" path="/consulacr2.do"/> 
+    <forward name="reg.ent" path="/registroent.do"/>
+    <forward name="eli.acr" path="/eliminaacr.do"/>
+    <forward name="mod.ent" path="/modent.do"/>    
+    <forward name="cam.usu" path="/cambia.do"/>
+    <forward name="mod.acra" path="/modifacra.do"/>     
+    <forward name="mod.acrc" path="/modifacrc.do"/>   
+    <forward name="exit.home" path="/salir.do"/>    
+  </global-forwards>
+  <action-mappings>
+    <action path="/ini" forward="ser.home"/>
+    <action path="/registro" forward="sca.reg.inf"/>
+    <action path="/registro2" forward="sca.reg.inf2"/>
+    
+    <action path="/modifacr" forward="sca.mod.acr"/>
+    <action path="/consulacr" forward="sca.con.acr"/>
+    <action path="/consulacr2" forward="sca.con.acr2"/>
+    <action path="/registroent" forward="sca.reg.ent"/>
+    <action path="/eliminaacr" forward="sca.eli.acr"/>
+    <action path="/modent" forward="sca.mod.ent"/>
+    <action path="/CambioAction" forward="sca.cam.usu"/>    
+    <action path="/modifacra" forward="sca.mod.acra"/>
+    <action path="/modifacrc" forward="sca.mod.acrc"/>
+
+    <action path="/MenuAction" type="sicopea.MenuAction" name="beanMenu" scope="request">
+      <forward name="ini" path="ser.home"/> 
+      <forward name="reg.inf" path="sca.reg.inf"/>  
+      <forward name="reg.inf2" path="sca.reg.inf2"/>
+      <forward name="mod.acr" path="sca.mod.acr"/>      
+      <forward name="con.acr" path="sca.con.acr"/>      
+      <forward name="con.acr2" path="sca.con.acr2"/>      
+      <forward name="reg.ent" path="sca.reg.ent"/>      
+      <forward name="eli.acr" path="sca.eli.acr"/>
+      <forward name="mod.ent" path="sca.mod.ent"/> 
+      <forward name="cam.usu" path="sca.cam.usu"/> 
+      <forward name="mod.acra" path="sca.mod.acra"/> 
+      <forward name="mod.acrc" path="sca.mod.acrc"/> 
+      <forward name="exit" path="/input.jsp"/>          
+    </action>
+
+
+    <action path="/ingreso" type="sicopea.inputAction" name="inputActionForm" scope="request">
+      <forward name="ok" path="ser.home"/>
+      <forward name="nook" path="/input.jsp"/>
+    </action>
+    <action path="/reginf" type="sicopea.reginfAction" name="reginfForm" scope="request">
+      <forward name="volver" path="sca.reg.inf"/>
+      <forward name="modif" path="sca.mod.acr"/>
+      <forward name="modif1" path="sca.mod.acra"/>
+      <forward name="modif2" path="sca.mod.acrc"/>
+    </action>
+    <action path="/reginf2" type="sicopea.reginf2Action" name="reginf2Form" scope="request">
+      <forward name="volver" path="sca.reg.inf2"/>
+      <forward name="modif" path="sca.mod.acr"/>
+      <forward name="modif1" path="sca.mod.acra"/>
+      <forward name="modif2" path="sca.mod.acrc"/>
+    </action>
+    <action path="/regent" type="sicopea.regentAction" name="regentForm" scope="request">
+      <forward name="volver" path="sca.reg.ent"/>
+    </action>
+    <action path="/modacr" type="sicopea.modacrAction" name="modacrForm" scope="request">
+      <forward name="volver" path="sca.mod.acr"/>
+      <forward name="volver1" path="sca.mod.acra"/>
+      <forward name="volver2" path="sca.mod.acrc"/>
+    </action>
+    <action path="/conacr" type="sicopea.conacrAction" name="conacrForm" scope="request">
+      <forward name="volver" path="sca.con.acr"/>
+    </action>
+    <action path="/conacr2" type="sicopea.conacr2Action" name="conacr2Form" scope="request">
+      <forward name="volver" path="sca.con.acr2"/>
+    </action>
+    <action path="/eliacr" type="sicopea.eliacrAction" name="eliacrForm" scope="request">
+     <forward name="volver" path="sca.eli.acr"/>
+    </action>
+    <action path="/impacr" type="sicopea.impacrAction" name="impacrForm" scope="request">
+      <forward name="success" path="sca.imp.acr"/>
+      <forward name="error" path="/inicio.jsp"/>
+    </action>
+    <action path="/impacr2" type="sicopea.impacr2Action" name="impacr2Form" scope="request">
+      <forward name="success" path="sca.imp.acr2"/>
+      <forward name="error" path="/inicio.jsp"/>
+    </action>
+    
+    <action path="/modent" type="sicopea.modentAction" name="modentForm" scope="request">
+      <forward name="volver" path="sca.mod.ent"/>
+    </action>
+    
+    <action path="/CambioAction" type="sicopea.CambioAction" name="CambioForm" scope="request">
+      <forward name="usuario" path="/input.jsp"/>
+      <forward name="cambio" path="sca.cam.usu"/>
+    </action>
+    
+    <action path="/cambia" type="sicopea.CambiaAction">
+      <forward name="cambio" path="sca.cam.usu"/>
+    </action>
+<action path="/salir" type="sicopea.SalirAction">
+      <forward name="input" path="/input.jsp"/>
+    </action>
+    
+  </action-mappings>
+  <message-resources parameter="sicopea.ApplicationResources"/>
+  <plug-in className="org.apache.struts.tiles.TilesPlugin">
+    <set-property value="/WEB-INF/tiles-defs.xml" property="definitions-config"/>
+    <set-property value="2" property="definitions-debug"/>
+    <set-property value="1" property="definitions-parser-details"/>
+    <set-property value="true" property="definitions-parse-validate"/>
+  </plug-in>
+ 
+</struts-config>

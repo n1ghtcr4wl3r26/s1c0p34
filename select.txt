@@ -1,0 +1,41 @@
+  <tr>
+    	<th><%= rs.getString("ser_nber") %></th> 
+        <% String pmerca = rs.getString("c1");
+           String pmarca = rs.getString("c2");
+           String pmodelo = rs.getString("c3");
+           String pserie = rs.getString("ser_serie");
+           String pobs = rs.getString("ser_obs");
+           String qmarca = "select me3_cod,me3_dsc from davbkp.unme3tab where me3_me2=1 and me3_me1 = " + pmerca + " order by me3_cod";
+           String qmodelo = "select me3_cod, me3_dsc from davbkp.unme3tab where me3_me1="+pmerca+" and me3_me2=4 and dep_cod="+pmarca+" order by me3_cod";
+        %>        
+      	<td><html:select property="mercaderia" styleId="mercaderia" value="<%= pmerca %>" disabled="true"> 
+      			<database:dbQuery connId="cn" output="JDBC" queryId="rsmer">
+      				select me1_cod,me1_dsc from davbkp.unme1tab order by me1_cod
+      			</database:dbQuery>
+      			<database:dbNextRow queryId="rsmer">
+            	<html:option value="<%= rsmer.getString(1)%>"><%= rsmer.getString(2) %></html:option>
+      			</database:dbNextRow>
+            <database:dbCloseQuery queryId = "rsmer" />
+        		</html:select></td>
+      	<td><html:select property="marca" styleId="marca" value="<%= pmarca %>" disabled="true">
+      			<database:dbQuery connId="cn" output="JDBC" queryId="rsmar">
+      				<%= qmarca%>
+      			</database:dbQuery>
+      			<database:dbNextRow queryId="rsmar">
+            	<html:option value="<%= rsmar.getString(1)%>"><%= rsmar.getString(2) %></html:option>
+      			</database:dbNextRow>
+            <database:dbCloseQuery queryId = "rsmar" />
+        		</html:select></td>
+      	<td><html:select property="modelo" styleId="modelo" value="<%= pmodelo %>" disabled="true">
+      			<database:dbQuery connId="cn" output="JDBC" queryId="rsmod">
+      				<%= qmodelo%>
+      			</database:dbQuery>
+      			<database:dbNextRow queryId="rsmod">
+            	<html:option value="<%= rsmod.getString(1)%>"><%= rsmod.getString(2) %></html:option>
+      			</database:dbNextRow>
+            <database:dbCloseQuery queryId = "rsmod" />
+        		</html:select></td>
+    		<td><html:text property="serie" styleId="serie" value="<%= pserie %>" readonly="true" /></td>                                    
+      	<td><html:text property="observaciones" styleId="observaciones" value="<%= pobs %>" readonly="true" /></td>                                                                        
+        <td><input type="button" name="btnmod" value="Modificar"></td>
+     </tr>

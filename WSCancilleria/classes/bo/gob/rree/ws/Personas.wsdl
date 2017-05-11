@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="Personas" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="ConsultaService.xsd" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="ConsultaService_2.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="ConsultaService_1.xsd" namespace="http://schemas.datacontract.org/2004/07/"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPersonas_GetAcreditados_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcreditados"/>
+  </wsdl:message>
+  <wsdl:message name="IPersonas_GetAcreditados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcreditadosResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IPersonas_GetDirectorio_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectorio"/>
+  </wsdl:message>
+  <wsdl:message name="IPersonas_GetDirectorio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectorioResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IPersonas">
+    <wsdl:operation name="GetAcreditados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonas/GetAcreditados" message="tns:IPersonas_GetAcreditados_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonas/GetAcreditadosResponse" message="tns:IPersonas_GetAcreditados_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectorio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonas/GetDirectorio" message="tns:IPersonas_GetDirectorio_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonas/GetDirectorioResponse" message="tns:IPersonas_GetDirectorio_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPersonas" type="tns:IPersonas">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetAcreditados">
+      <soap:operation soapAction="http://tempuri.org/IPersonas/GetAcreditados" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectorio">
+      <soap:operation soapAction="http://tempuri.org/IPersonas/GetDirectorio" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Personas">
+    <wsdl:port name="BasicHttpBinding_IPersonas" binding="tns:BasicHttpBinding_IPersonas">
+      <soap:address location="http://www.rree.gob.bo/WsAduana/ConsultaService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

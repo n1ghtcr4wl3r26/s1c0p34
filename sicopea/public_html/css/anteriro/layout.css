@@ -1,0 +1,42 @@
+BODY {
+	min-width: 60em
+}
+#header {
+	DISPLAY: inline-block; OVERFLOW: hidden
+}
+#content {
+	DISPLAY: inline-block; OVERFLOW: hidden
+}
+#content2 {
+	DISPLAY: inline-block; OVERFLOW: hidden
+}
+#sidebar {
+	DISPLAY: inline-block; OVERFLOW: hidden
+}
+#footer {
+	DISPLAY: inline-block; OVERFLOW: hidden
+}
+#header {
+	WIDTH: 100%
+}
+#footer {
+	WIDTH: 100%
+}
+#header {
+	FLOAT: left
+}
+#sidebar {
+	FLOAT: left
+}
+#wrapper {
+	FLOAT: left; WIDTH: 100%
+}
+#content {
+	MARGIN-LEFT: 15em
+}
+#sidebar {
+	FLOAT: left; MARGIN-LEFT: -100%; WIDTH: 15em
+}
+#footer {
+	CLEAR: both
+}

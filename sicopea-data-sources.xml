@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE data-sources PUBLIC "Orion data-sources" "http://xmlns.oracle.com/ias/dtds/data-sources.dtd">
+<data-sources>
+   <data-source class="com.evermind.sql.DriverManagerDataSource" connection-driver="oracle.jdbc.driver.OracleDriver" ejb-location="jdbc/scddDS" inactivity-timeout="30" location="jdbc/scddCoreDS" name="jdev-connection:scdd" password="scdd" pooled-location="jdbc/scddPooledDS" url="jdbc:oracle:thin:@172.16.0.16:1521:desa" username="scdd" xa-location="jdbc/xa/scddXADS"/>
+</data-sources>
