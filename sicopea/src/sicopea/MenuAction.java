@@ -1,8 +1,8 @@
 package sicopea;
 
-import cliente.bean.ClaseUsuario;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,8 +11,7 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionMessage;
-import org.apache.struts.action.ActionMessages;
+
 
 public class MenuAction extends Action 
 {
@@ -27,6 +26,8 @@ public class MenuAction extends Action
       direc="reg.inf";
    }else if(bMenu.getOpcion().equals("reg.inf2")){
       direc="reg.inf2";
+   }else if(bMenu.getOpcion().equals("reg.inf617")){
+      direc="reg.inf617"; 
    }else if(bMenu.getOpcion().equals("mod.acr")){
       direc="mod.acr";
    }else if(bMenu.getOpcion().equals("eli.acr")){

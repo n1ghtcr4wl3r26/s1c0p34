@@ -6,6 +6,7 @@
     <form-bean name="beanMenu" type="sicopea.MenuForm"/>
     <form-bean name="reginfForm" type="sicopea.reginfForm"/>
     <form-bean name="reginf2Form" type="sicopea.reginf2Form"/>
+    <form-bean name="reginf617Form" type="sicopea.reginf617Form"/>
     <form-bean name="modacrForm" type="sicopea.modacrForm"/>    
     <form-bean name="conacrForm" type="sicopea.conacrForm"/>
     <form-bean name="conacr2Form" type="sicopea.conacr2Form"/>    
@@ -21,6 +22,7 @@
     <forward name="ser.home" path="/ini.do"/>
     <forward name="reg.inf" path="/registro.do"/> 
     <forward name="reg.inf2" path="/registro2.do"/>
+    <forward name="reg.inf617" path="/registro617.do"/>
     <forward name="mod.acr" path="/modifacr.do"/> 
     <forward name="con.acr" path="/consulacr.do"/> 
     <forward name="con.acr2" path="/consulacr2.do"/> 
@@ -36,6 +38,7 @@
     <action path="/ini" forward="ser.home"/>
     <action path="/registro" forward="sca.reg.inf"/>
     <action path="/registro2" forward="sca.reg.inf2"/>
+    <action path="/registro617" forward="sca.reg.inf617"/>
     
     <action path="/modifacr" forward="sca.mod.acr"/>
     <action path="/consulacr" forward="sca.con.acr"/>
@@ -51,6 +54,7 @@
       <forward name="ini" path="ser.home"/> 
       <forward name="reg.inf" path="sca.reg.inf"/>  
       <forward name="reg.inf2" path="sca.reg.inf2"/>
+      <forward name="reg.inf617" path="sca.reg.inf617"/>
       <forward name="mod.acr" path="sca.mod.acr"/>      
       <forward name="con.acr" path="sca.con.acr"/>      
       <forward name="con.acr2" path="sca.con.acr2"/>      
@@ -76,6 +80,12 @@
     </action>
     <action path="/reginf2" type="sicopea.reginf2Action" name="reginf2Form" scope="request">
       <forward name="volver" path="sca.reg.inf2"/>
+      <forward name="modif" path="sca.mod.acr"/>
+      <forward name="modif1" path="sca.mod.acra"/>
+      <forward name="modif2" path="sca.mod.acrc"/>
+    </action>
+    <action path="/reginf617" type="sicopea.reginf617Action" name="reginf617Form" scope="request">
+      <forward name="volver" path="sca.reg.inf617"/>
       <forward name="modif" path="sca.mod.acr"/>
       <forward name="modif1" path="sca.mod.acra"/>
       <forward name="modif2" path="sca.mod.acrc"/>
