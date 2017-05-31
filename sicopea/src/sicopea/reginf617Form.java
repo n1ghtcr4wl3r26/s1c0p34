@@ -40,6 +40,9 @@ public class reginf617Form extends ActionForm
     private String v_docidentidad;
     private String v_tipodoc;
     private String valores;
+    
+    private String vtipodiplomatico;
+    private String vproyecto;
 
 
     
@@ -274,5 +277,21 @@ public class reginf617Form extends ActionForm
 
     public String getValores() {
         return valores;
+    }
+
+    public void setVproyecto(String vproyecto) {
+        this.vproyecto = vproyecto;
+    }
+
+    public String getVproyecto() {
+        return vproyecto;
+    }
+
+    public void setVtipodiplomatico(String vtipodiplomatico) {
+        this.vtipodiplomatico = vtipodiplomatico;
+    }
+
+    public String getVtipodiplomatico() {
+        return vtipodiplomatico;
     }
 }

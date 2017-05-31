@@ -6,13 +6,20 @@
 package sicopea;
 
 import java.io.IOException;
-import java.sql.*;
-import javax.naming.InitialContext;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import javax.servlet.ServletException;
-import javax.servlet.http.*;
-import javax.sql.PooledConnection;
-import oracle.jdbc.pool.OracleConnectionPoolDataSource;
-import org.apache.struts.action.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
 
 // Referenced classes of package sicopea:
 //            modacrForm, reginfForm, util
@@ -71,6 +78,9 @@ public class modacrAction extends Action
                     
                     rformset.setV_docidentidad(rs.getString(9));
                     rformset.setV_tipodoc(rs.getString(10));
+                    
+                    rformset.setVtipodiplomatico(rs.getString(11));
+                    rformset.setVproyecto(rs.getString(12));
                 }
             }
             catch(Exception er)

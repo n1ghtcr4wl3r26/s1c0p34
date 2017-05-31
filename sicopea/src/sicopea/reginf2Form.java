@@ -6,7 +6,11 @@
 package sicopea;
 
 import javax.servlet.http.HttpServletRequest;
-import org.apache.struts.action.*;
+
+import org.apache.struts.action.ActionErrors;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionMapping;
+
 
 public class reginf2Form extends ActionForm
 {
@@ -212,4 +216,23 @@ public class reginf2Form extends ActionForm
     private String vfecobs;
     private String vtipolist;
     private String vtipomodif;
+    
+    private String vtipodiplomatico;
+    private String vproyecto;
+
+    public void setVtipodiplomatico(String vtipodiplomatico) {
+        this.vtipodiplomatico = vtipodiplomatico;
+    }
+
+    public String getVtipodiplomatico() {
+        return vtipodiplomatico;
+    }
+
+    public void setVproyecto(String vproyecto) {
+        this.vproyecto = vproyecto;
+    }
+
+    public String getVproyecto() {
+        return vproyecto;
+    }
 }

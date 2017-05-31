@@ -26,7 +26,8 @@ String snentidad = util.devuelve_nombre_entidad(usuario,perfil);
 <html:form action="/reginf2" styleId="frmreginf" styleClass="form" onsubmit="return fEvalua( );">
 <h2><span class="maintitle">REGISTRO REPATRIADOS</span></h2>
 <html:hidden property="vcodigo" value="100" />
-
+<html:hidden property="vtipodiplomatico" styleId="vtipodiplomatico"/>
+<html:hidden property="vproyecto" styleId="vproyecto"/>
 
  <fieldset>
 	<legend class="maintitle2">Formulario de Registro de Repatriados</legend>

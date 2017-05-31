@@ -205,6 +205,8 @@ public class reginfAction extends Action
                         call.setString(11, rform.getVentidad());
                         call.setString(12, rform.getV_docidentidad());
                         call.setString(13, rform.getV_tipodoc());
+                        call.setString(14, "Normal");
+                        call.setString(15, null);
                     } 
                     if(rform.getBoton().equals("Modificar"))
                     {

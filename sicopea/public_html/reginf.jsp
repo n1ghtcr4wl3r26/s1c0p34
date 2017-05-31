@@ -27,6 +27,9 @@ String snentidad = util.devuelve_nombre_entidad(usuario,perfil);
 <html:hidden property="v_tipodoc" styleId="v_tipodoc"/>
 <html:hidden property="valores" styleId="valores"/>
 
+<html:hidden property="vtipodiplomatico" styleId="vtipodiplomatico"/>
+<html:hidden property="vproyecto" styleId="vproyecto"/>
+
 <h2><span class="maintitle">REGISTRO</span></h2>
 <html:hidden property="vcodigo" value="100" />
 

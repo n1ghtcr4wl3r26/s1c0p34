@@ -6,13 +6,20 @@
 package sicopea;
 
 import java.io.IOException;
-import java.sql.*;
-import javax.naming.InitialContext;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.SQLException;
+
 import javax.servlet.ServletException;
-import javax.servlet.http.*;
-import javax.sql.PooledConnection;
-import oracle.jdbc.pool.OracleConnectionPoolDataSource;
-import org.apache.struts.action.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+
 
 // Referenced classes of package sicopea:
 //            reginf2Form, modacrForm, util
@@ -76,6 +83,8 @@ public class reginf2Action extends Action
                         call.setString(11, rform.getVentidad());
                         call.setString(12, null);
                         call.setString(13, null);
+                        call.setString(14, "Repatriado");
+                        call.setString(15, null);
                     }
                     if(rform.getBoton().equals("Modificar"))
                     {
@@ -103,6 +112,9 @@ public class reginf2Action extends Action
                         
                         call.setString(15, null);
                         call.setString(16, null);
+                        
+                        call.setString(17, rform.getVtipodiplomatico());
+                        call.setString(18, rform.getVproyecto());
                     }
                     call.execute();
                     res = call.getObject(1).toString();

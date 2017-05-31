@@ -27,6 +27,9 @@ String snentidad = util.devuelve_nombre_entidad(usuario,perfil);
 <html:hidden property="v_tipodoc" styleId="v_tipodoc"/>
 <html:hidden property="valores" styleId="valores"/>
 
+<html:hidden property="vtipodiplomatico" styleId="vtipodiplomatico"/>
+
+
 <h2><span class="maintitle">REGISTRO</span></h2>
 <html:hidden property="vcodigo" value="100" />
 
@@ -119,7 +122,14 @@ if (!(rif.getResp()==null))
      <td colspan="3" ><html:textarea property="vcargo" style="width:400px; height:40px; font-family: Arial, Helvetica, sans-serif; font-size: 10px;" styleId="vcargo" onblur="this.value = this.value.toUpperCase()" />
     </td>
   </tr>
-  
+  <tr>
+    <td class="row2" colspan="3">Nombre del Proyecto y/o Programa al que pertenece</td>
+  </tr>
+  <tr>
+    <td colspan="3">
+        <html:textarea property="vproyecto" style="width:400px; height:40px; font-family: Arial, Helvetica, sans-serif; font-size:10px" styleId="vproyecto" onblur="this.value=this.value.toUpperCase()"/>
+    </td>
+  </tr>  
   <tr>
     <td class=row2 colspan="3" >Categoría</td>
   </tr>

@@ -205,6 +205,8 @@ public class reginf617Action extends Action
                         call.setString(11, rform.getVentidad());
                         call.setString(12, rform.getV_docidentidad());
                         call.setString(13, rform.getV_tipodoc());
+                        call.setString(14, "Ley617");
+                        call.setString(15, rform.getVproyecto());
                     } 
                     if(rform.getBoton().equals("Modificar"))
                     {
@@ -232,6 +234,9 @@ public class reginf617Action extends Action
                         
                         call.setString(15, rform.getV_docidentidad());
                         call.setString(16, rform.getV_tipodoc());
+                        
+                        call.setString(17, rform.getVtipodiplomatico());
+                        call.setString(18, rform.getVproyecto());
                     }
                     call.execute();
                     res = call.getObject(1).toString();
