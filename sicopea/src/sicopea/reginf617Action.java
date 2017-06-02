@@ -191,7 +191,7 @@ public class reginf617Action extends Action
                     con = dc.abrirConexion();
                     if(rform.getBoton().equals("Grabar"))
                     {
-                        call = con.prepareCall("{ ? = call pkg_acreditacion.registra_acreditado ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,  ?,?) }");
+                        call = con.prepareCall("{ ? = call pkg_acreditacion.registra_acreditado ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,  ?,? ,?,?) }");
                         call.registerOutParameter(1, 12);
                         call.setString(2, rform.getVcodigo());
                         call.setString(3, rform.getVnombre());
@@ -216,7 +216,7 @@ public class reginf617Action extends Action
                             responselink = "modif1";
                         if(rform.getVtipomodif().equals("2"))
                             responselink = "modif2";
-                        call = con.prepareCall("{ ? = call pkg_acreditacion.modifica_acreditado ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?  ,?,?) }");
+                        call = con.prepareCall("{ ? = call pkg_acreditacion.modifica_acreditado ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?  ,?,? ,?,?) }");
                         call.registerOutParameter(1, 12);
                         call.setString(2, rform.getVcodigo());
                         call.setString(3, rform.getVnombre());

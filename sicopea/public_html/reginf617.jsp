@@ -13,7 +13,7 @@
 
 <link href="fisubice.css" type=text/css rel=stylesheet />
 <%
-reginfForm rinf = (reginfForm)request.getAttribute("reginfForm");
+reginf617Form rinf = (reginf617Form)request.getAttribute("reginf617Form");
 
 String usuario = request.getSession().getAttribute("user.nick").toString();
 String perfil = request.getSession().getAttribute("user.perfil").toString(); 
@@ -22,11 +22,11 @@ String snentidad = util.devuelve_nombre_entidad(usuario,perfil);
 %>
 <html:errors />    
 
-<html:form action="/reginf" styleId="frmreginf" styleClass="form" >
+<html:form action="/reginf617" styleId="frmreginf" styleClass="form" >
 <html:hidden property="v_docidentidad" styleId="v_docidentidad"/>
 <html:hidden property="v_tipodoc" styleId="v_tipodoc"/>
 <html:hidden property="valores" styleId="valores"/>
-
+<html:hidden property="vcategoria" styleId="vcategoria" value="Cooperante"/>
 <html:hidden property="vtipodiplomatico" styleId="vtipodiplomatico"/>
 
 
@@ -58,7 +58,7 @@ String snentidad = util.devuelve_nombre_entidad(usuario,perfil);
  <br>
   
   
-<%reginfForm rif = (reginfForm)request.getAttribute("reginfForm");
+<%reginf617Form rif = (reginf617Form)request.getAttribute("reginf617Form");
 try
 {
 if (!(rif.getResp()==null))
@@ -79,7 +79,7 @@ if (!(rif.getResp()==null))
   %><td class=cat colspan="3"  >      
             Institución: <html:select property="ventidad" styleId="centidad" >
             <% 
-            reginfForm con = (reginfForm)request.getAttribute("reginfForm");
+            reginf617Form con = (reginf617Form)request.getAttribute("reginf617Form");
             
             if(con.getVentidad() == null)
             {
@@ -130,24 +130,6 @@ if (!(rif.getResp()==null))
         <html:textarea property="vproyecto" style="width:400px; height:40px; font-family: Arial, Helvetica, sans-serif; font-size:10px" styleId="vproyecto" onblur="this.value=this.value.toUpperCase()"/>
     </td>
   </tr>  
-  <tr>
-    <td class=row2 colspan="3" >Categoría</td>
-  </tr>
-  <tr>
-    <td class=row1  colspan="3" > 
-    <html:select property="vcategoria" styleId="vcategoria">
-        <html:option value="">-- Seleccione una Categoría --</html:option>
-        <html:option value="1">Categoría 1</html:option>
-        <html:option value="2">Categoría 2</html:option>
-        <html:option value="3">Categoría 3</html:option>
-        <html:option value="4">Categoría 4</html:option>
-        <html:option value="5">Categoría 5</html:option>         
-        <html:option value="6">Categoría 6</html:option> 
-        <html:option value="7">Ninguna</html:option> 
-        <html:option value="8">Otros</html:option> 
-    </html:select> 
-    </td>
-  </tr>
   <tr>
     <td class=row2 ALIGN="center" >Fecha de llegada al País</td>
     <td class=row2 ALIGN="center" colspan="2" >Fecha de cese de funciones</td>

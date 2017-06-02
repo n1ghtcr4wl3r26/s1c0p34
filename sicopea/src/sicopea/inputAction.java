@@ -1,49 +1,45 @@
 package sicopea;
 
 
-import bo.gob.rree.ent.EntidadInfo;
+import cliente.ClaseEnvio;
+import cliente.ServiciosUsuario;
 
-import bo.gob.rree.ent.PersonaInfo;
+import cliente.bean.ClaseOpcion;
+import cliente.bean.ClaseUsuario;
+
+import java.io.IOException;
+import java.io.StringReader;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import cliente.ClaseEnvio;
-import cliente.ServiciosUsuario;
-import cliente.bean.ClaseUsuario;
-import cliente.bean.ClaseOpcion;
-
-import java.io.StringReader;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
-//******
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.w3c.dom.Document;
-
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import org.xml.sax.InputSource;
+
+
+//******
+
+
 //******
 
 //**modificacion 16112015 edgar arteaga, para recuperar datos de cancilleria
 //import bo.gob.aduana.cancilleria.ws.SvcCancilleria;
-import bo.gob.rree.ws.SvcCancilleria;
 
 public class inputAction extends Action 
 {
@@ -91,7 +87,7 @@ public class inputAction extends Action
     try
     {
         SvcCancilleria svc = new SvcCancilleria();
-        List<PersonaInfo> entidades = svc.getAcreditados(null,"Reza" , 1, 1, 10);
+        List<PersonaInfo> entidades = svc.getAcreditados(null,"Reza" ,null, 1, 1, 10);
         PersonaInfo persona = new PersonaInfo(); // (PersonaInfo)entidades;
         persona = entidades.get(0); 
         
