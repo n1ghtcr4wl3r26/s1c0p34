@@ -38,6 +38,19 @@ reginfForm rform = (reginfForm) request.getAttribute("reginfForm");
 reginfForm rif = (reginfForm)request.getAttribute("reginfForm");
 
 %>
+<%
+//SimpleDateFormat f=new SimpleDateFormat("dd/MM/yyyy");
+try
+{
+
+if (!(rif.getResp()==null))
+{
+
+
+%><div style="margin-bottom:4px; background-color: #9DD5EE; border-width: 12; width: 300px; font-family: Verdana, Geneva, sans-serif; color: #003; text-align: center; height: 30px; vertical-align: middle;">
+<%=rif.getResp()%>
+</div>
+<%}}catch(Exception er){}%>
 <h2><span class="maintitle">CESE DE ACREDITADOS</span></h2>
 <%
 String ver = "";
@@ -306,16 +319,31 @@ if (!(rif.getResp()==null))
         <html:text readonly="true" style="text-align:center" property="v_docidentidad" size="20" styleId="v_docidentidad"/>
     </td>
   </tr>
-  
+  <% if (!(rif.getVtipodiplomatico()==null) && rif.getVtipodiplomatico().equals("Ley617") )
+  { %>
+  <tr>
+    <html:hidden property="vcategoria"  />
+    <html:hidden property="vtipodiplomatico"  />
+    <td class="row2" colspan="3">Nombre del Proyecto y/o Programa al que pertenece</td>
+  </tr>
+  <tr>
+    <td colspan="3">
+        <html:textarea  readonly="true" property="vproyecto" style="width:400px; height:40px; font-family: Arial, Helvetica, sans-serif; font-size:10px" styleId="vproyecto" onblur="this.value=this.value.toUpperCase()"/>
+    </td>
+  </tr>  
+  <% } else { %>
   <tr>
     <td class=row2 colspan="3" >Categoría</td>
   </tr>
   <tr>
     <td class=row1  colspan="3" > 
-    <html:text property="vcategoria" size="30" styleId="vcategoria" style="background-color:#FFC" readonly="true"  />
+     <html:hidden property="vproyecto"  />
+     <html:hidden property="vtipodiplomatico"  />
+     <html:text property="vcategoria" size="30" styleId="vcategoria" style="background-color:#FFC" readonly="true"  />
     
     </td>
   </tr>
+  <%}%>
   <tr>
     <td class=row2 ALIGN="center" >Fecha de llegada al País</td>
     <td class=row2 ALIGN="center" colspan="2" >Fecha de cese de funciones</td>

@@ -206,13 +206,11 @@ if (!(rform==null))
   </tr>
   <tr>
     <td class=row2 ALIGN="center" >Fecha de llegada al Pais</td>
-    <td class=row2 ALIGN="center" colspan="2" >Fecha de cese de funciones</td>
-  
+    <td class=row2 ALIGN="center" colspan="2" >Fecha de cese de funciones</td>  
   </tr>
   <tr>
     <td class=row1  ALIGN="center" ><html:text property="vfecllegada" size="10" styleId="vfecllegada"/></td>
-    <td class=row1  ALIGN="center" colspan="2"  ><html:text property="vfeccese" size="10" styleId="vfeccese"/></td>
-    
+    <td class=row1  ALIGN="center" colspan="2"  ><html:text property="vfeccese" size="10" styleId="vfeccese"/></td>    
   </tr>
   <tr>
     <td class=row1  colspan="3">&nbsp;</td>

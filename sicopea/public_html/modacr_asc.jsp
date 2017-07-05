@@ -39,6 +39,18 @@ reginfForm rform = (reginfForm) request.getAttribute("reginfForm");
 reginfForm rif = (reginfForm)request.getAttribute("reginfForm");
 
 %>
+
+<%
+//SimpleDateFormat f=new SimpleDateFormat("dd/MM/yyyy");
+try
+{
+if (!(rif.getResp()==null))
+{
+%><div style="margin-bottom:4px; background-color: #9DD5EE; border-width: 12px; width: 300px; font-family: Verdana, Geneva, sans-serif; color: #003; text-align: center; height: 30px; vertical-align: middle;">
+<%=rif.getResp()%>
+</div>
+<%}}catch(Exception er){}%>
+
 <h2><span class="maintitle">ASCENSO DE ACREDITADOS</span></h2>
 <%
 String ver = "";
@@ -316,23 +328,70 @@ if (!(rif.getResp()==null))
   </tr>
   
   
+  <% if (!(rif.getVtipodiplomatico()==null) && rif.getVtipodiplomatico().equals("Ley617") )
+  { %>
   <tr>
-    <td class=row2 colspan="3" >Categoría</td>
+    <html:hidden property="vcategoria"  />
+    <html:hidden property="vtipodiplomatico"  />
+    <td class="row2" colspan="3">Nombre del Proyecto y/o Programa al que pertenece</td>
   </tr>
   <tr>
-    <td class=row1  colspan="3" > 
-    <html:select property="vcategoria" styleId="vcategoria">
-        <html:option value="1">Categoría 1</html:option>
-        <html:option value="2">Categoría 2</html:option>
-        <html:option value="3">Categoría 3</html:option>
-        <html:option value="4">Categoría 4</html:option>
-        <html:option value="5">Categoría 5</html:option>         
-        <html:option value="6">Categoría 6</html:option> 
-        <html:option value="Otros">Otros</html:option>
-        <html:option value="Ninguna">Ninguna</html:option> 
-    </html:select> 
+    <td colspan="3">
+        <html:textarea  readonly="true" property="vproyecto" style="width:400px; height:40px; font-family: Arial, Helvetica, sans-serif; font-size:10px" styleId="vproyecto" onblur="this.value=this.value.toUpperCase()"/>
     </td>
-  </tr>
+  </tr>  
+  <% } else { %>
+  
+   <tr>
+                        <td class="row2" colspan="3">Categor&iacute;a</td>
+                    </tr>
+                     
+                    <tr>
+                        <td class="row1" colspan="3">
+                            <html:hidden property="vproyecto"/>
+                             
+                            <html:hidden property="vtipodiplomatico"/>
+                             
+                            <html:select property="vcategoria" styleId="vcategoria">
+                                <%
+                    if (!(rif.getVfeccese()==null))
+                    {
+                        %>
+                                <html:option value="1">Categor&iacute;a 1</html:option>
+                                <html:option value="2">Categor&iacute;a 2</html:option>
+                                <html:option value="3">Categor&iacute;a 3</html:option>
+                                <html:option value="4">Categor&iacute;a 4</html:option>
+                                <html:option value="5">Categor&iacute;a 5</html:option>
+                                <html:option value="6">Categor&iacute;a 6</html:option>
+                                <html:option value="Otros">Otros</html:option>
+                                <html:option value="Ninguna">Ninguna</html:option>
+                                <%
+                    }
+                    else
+                    {
+                        if (!(rif.getVentidad().equals("253")))
+                        {
+                            %>
+                            <html:option value="5">Categor&iacute;a 5</html:option>
+                            <%
+                        }else{
+                            %>
+                            <html:option value="1">Categor&iacute;a 1</html:option>
+                            <html:option value="2">Categor&iacute;a 2</html:option>
+                            <html:option value="3">Categor&iacute;a 3</html:option>
+                            <html:option value="4">Categor&iacute;a 4</html:option>
+                            <html:option value="5">Categor&iacute;a 5</html:option>
+                            <html:option value="6">Categor&iacute;a 6</html:option>
+                            <html:option value="Otros">Otros</html:option>
+                            <html:option value="Ninguna">Ninguna</html:option>
+                            <%
+                        }
+                    } 
+                    %>
+                            </html:select>
+                        </td>
+                    </tr>
+  <%}%>
   <tr>
     <td class=row2 ALIGN="center" >Fecha de llegada al País</td>
     <td class=row2 ALIGN="center" colspan="2" >Fecha de cese de funciones</td>

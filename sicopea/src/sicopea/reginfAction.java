@@ -216,7 +216,7 @@ public class reginfAction extends Action
                             responselink = "modif1";
                         if(rform.getVtipomodif().equals("2"))
                             responselink = "modif2";
-                        call = con.prepareCall("{ ? = call pkg_acreditacion.modifica_acreditado ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?  ,?,? ,?,?) }");
+                        call = con.prepareCall("{ ? = call pkg_acreditacion.modifica_acreditado ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?  ,?,? ,?,? ) }");
                         call.registerOutParameter(1, 12);
                         call.setString(2, rform.getVcodigo());
                         call.setString(3, rform.getVnombre());
@@ -234,6 +234,9 @@ public class reginfAction extends Action
                         
                         call.setString(15, rform.getV_docidentidad());
                         call.setString(16, rform.getV_tipodoc());
+                        call.setString(17, rform.getVtipodiplomatico());
+                        call.setString(18, rform.getVproyecto());
+                        
                     }
                     call.execute();
                     res = call.getObject(1).toString();
