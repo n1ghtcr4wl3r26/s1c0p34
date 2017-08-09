@@ -8,8 +8,8 @@
 
 <%@ page contentType="text/html;charset=iso-8859-1"%>
 <html:errors />
-<script language="JavaScript" type="text/JavaScript" src="jscript/valida.js?v=2"></script>
-<script language="JavaScript" type="text/JavaScript" src="jscript/conacr2.js?v=2"></script>
+<script language="JavaScript" type="text/JavaScript" src="jscript/valida.js?${sessionScope.VERSION_ASSETS}"></script>
+<script language="JavaScript" type="text/JavaScript" src="jscript/conacr2.js?${sessionScope.VERSION_ASSETS}"></script>
 <script language="JavaScript" type="text/javascript">
 <!--
 

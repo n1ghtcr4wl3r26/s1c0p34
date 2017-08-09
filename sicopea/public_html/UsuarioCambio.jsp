@@ -9,8 +9,8 @@ String usuario = request.getSession().getAttribute("user.nick").toString();
  CambioForm cb = (CambioForm)request.getAttribute("CambioForm");
 %>
 
-<script language="JavaScript" type="text/JavaScript" src="js/valida.js?v=1"></script>
-<script language="JavaScript" type="text/JavaScript" src="js/UsuarioCambio.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="js/valida.js?${sessionScope.VERSION_ASSETS}"></script>
+<script language="JavaScript" type="text/JavaScript" src="js/UsuarioCambio.js?${sessionScope.VERSION_ASSETS}"></script>
 
 <html:form action="/CambioAction" onsubmit="return fEvalua ( );" focus="clave">
   <html:hidden property="usuario" value="<%=usuario%>"/>

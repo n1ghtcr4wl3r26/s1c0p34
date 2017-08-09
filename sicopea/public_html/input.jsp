@@ -5,7 +5,7 @@
 
 <link href="css/layout.css" rel="stylesheet" type="text/css" />
 <link href="css/content.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="jscript/valida.js?v=2"></script>
+<script language="JavaScript" src="jscript/valida.js?${sessionScope.VERSION_ASSETS}"></script>
 <body OnLoad="NoAtras();">
 
 <div class="CentraLL">

@@ -11,7 +11,7 @@
 	<tiles:useAttribute name="jscript" scope="request" ignore="true" />
   <logic:notEmpty name="jscript">
     <script language="JavaScript" src="jscript/jquery.js"></script>
-    <script language="JavaScript" src="jscript/valida.js?v=2"></script>
+    <script language="JavaScript" src="jscript/valida.js?${sessionScope.VERSION_ASSETS}"></script>
     <script language="JavaScript" src="<tiles:getAsString name='jscript' />" charset="utf-8"></script>
   </logic:notEmpty>
   <link href="css/layout.css" rel="stylesheet" type="text/css" />

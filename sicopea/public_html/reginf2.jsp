@@ -6,8 +6,8 @@
 <%@ page import="java.sql.*, oracle.jdbc.driver.*, java.util.*, java.text.*"%>
 <%@ page import="oracle.jdbc.OracleTypes"%>
 <%@ page contentType="text/html;charset=iso-8859-1"%>
-<script language="JavaScript" type="text/JavaScript" src="jscript/valida.js?v=2"></script>
-<script language="JavaScript" type="text/JavaScript" src="jscript/vregistroent2.js?v=2"></script>
+<script language="JavaScript" type="text/JavaScript" src="jscript/valida.js?${sessionScope.VERSION_ASSETS}"></script>
+<script language="JavaScript" type="text/JavaScript" src="jscript/vregistroent2.js?${sessionScope.VERSION_ASSETS}"></script>
 <link href="fisubice.css" type=text/css rel=stylesheet />
 <%
     reginf2Form rinf = (reginf2Form)request.getAttribute("reginf2Form");
@@ -32,7 +32,7 @@
             {
                 if (!(rif.getResp()==null))
                 {   %>
-                    <div style="margin-bottom:4px; background-color: #9DD5EE; border-width: 12px; width: 300px; font-family: Verdana, Geneva, sans-serif; color: #003; text-align: center; height: 30px; vertical-align: middle;">
+                    <div id="respuesta" style="margin-bottom:4px; background-color: #9DD5EE; border-width: 12px; width: 300px; font-family: Verdana, Geneva, sans-serif; color: #003; text-align: center; height: 30px; vertical-align: middle;">
                         <%=rif.getResp()%>
                     </div>
                     <%
@@ -136,6 +136,8 @@
 <script>
     $(document).ready(function () {
         $('#centidad').change(function () {
+            $('#respuesta').html('');
+            $('#respuesta').hide();
             if ($('#centidad').val()=="253") {
                 $("#vcategoria").find("option[value='5']").remove();
                 $('#vcategoria').append('<option value="" selected="selected">-- Seleccione una Categoría --</option>'); 

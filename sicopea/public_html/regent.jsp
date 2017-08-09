@@ -14,8 +14,8 @@ String perfil = request.getSession().getAttribute("user.perfil").toString();
 String ssentidad = util.devuelve_entidad(usuario,perfil);
 String snentidad = util.devuelve_nombre_entidad(usuario,perfil);
 %>
-<script language="JavaScript" type="text/JavaScript" src="jscript/valida.js?v=2"></script>
-<script language="JavaScript" type="text/JavaScript" src="jscript/vregent.js?v=2"></script>
+<script language="JavaScript" type="text/JavaScript" src="jscript/valida.js?${sessionScope.VERSION_ASSETS}"></script>
+<script language="JavaScript" type="text/JavaScript" src="jscript/vregent.js?${sessionScope.VERSION_ASSETS}"></script>
 <html:errors />    
 <html:form action="/regent" styleId="frmreginf" styleClass="form" onsubmit="return fEvalua( );">
 <h2><span class="maintitle">REGISTRO DE ENTIDADES</span></h2>

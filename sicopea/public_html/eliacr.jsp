@@ -11,8 +11,8 @@
 
 <html:errors />
 
-<script language="JavaScript" type="text/JavaScript" src="jscript/valida.js?v=2"></script>
-<script language="JavaScript" type="text/JavaScript" src="jscript/velimreg.js?v=2"></script>
+<script language="JavaScript" type="text/JavaScript" src="jscript/valida.js?${sessionScope.VERSION_ASSETS}"></script>
+<script language="JavaScript" type="text/JavaScript" src="jscript/velimreg.js?${sessionScope.VERSION_ASSETS}"></script>
 <script language="JavaScript" type="text/javascript">
 <!--
 function pasadatos(num)

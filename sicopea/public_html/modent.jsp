@@ -19,7 +19,7 @@ Sistema de Control de Personas Acreditadas
   <link href="css/content.css" rel="stylesheet" type="text/css" />
   <link href="css/fisubice.css" type=text/css rel=stylesheet />
   
-<script language="JavaScript" type="text/JavaScript" src="jscript/veliment.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="jscript/veliment.js?${sessionScope.VERSION_ASSETS}"></script>
   <script language="JavaScript" type="text/javascript">
 function fUpper( texto )
 {

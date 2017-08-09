@@ -149,7 +149,7 @@ public class reginf617Action extends Action
                 //rform.setResp("Error: "+e.getMessage());
                 rform.setResp("ERROR DE CONEXION");
             }  
-            request.setAttribute("reginfForm", rform);
+            request.setAttribute("reginf617Form", rform);
         }    
         else
         if(rform.getBoton().equals("Cancelar"))
@@ -161,12 +161,12 @@ public class reginf617Action extends Action
             if(rform.getVtipomodif().equals("2"))
                 responselink = "modif2";
             modacrForm modifset = new modacrForm();
-            reginfForm regifset = new reginfForm();
+            reginf617Form regifset = new reginf617Form();
             modifset.setCentidad(rform.getVentidad());
             modifset.setCtipolist(rform.getVtipolist());
             modifset.setCcodigo("");
             request.setAttribute("modacrForm", modifset);
-            request.setAttribute("reginfForm", regifset);
+            request.setAttribute("reginf617Form", regifset);
         } else
         {
             String ssentidad = util.devuelve_entidad(usuario, perfil);
@@ -242,13 +242,13 @@ public class reginf617Action extends Action
                     res = call.getObject(1).toString();
                     con.commit();
                     modacrForm modifset = new modacrForm();
-                    reginfForm regifset = new reginfForm();
+                    reginf617Form regifset = new reginf617Form();
                     regifset.setResp(res);
                     modifset.setCentidad(rform.getVentidad());
                     modifset.setCtipolist(rform.getVtipolist());
                     modifset.setCcodigo("");
                     request.setAttribute("modacrForm", modifset);
-                    request.setAttribute("reginfForm", regifset);
+                    request.setAttribute("reginf617Form", regifset);
                 }
                 catch(Exception er)
                 {

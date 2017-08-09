@@ -8,8 +8,8 @@
 
 <%@ page contentType="text/html;charset=iso-8859-1"%>
 
-<script language="JavaScript" type="text/JavaScript" src="jscript/valida.js?v=2"></script>
-<script language="JavaScript" type="text/JavaScript" src="jscript/vregistroent3.js?v=2"></script>
+<script language="JavaScript" type="text/JavaScript" src="jscript/valida.js?${sessionScope.VERSION_ASSETS}"></script>
+<script language="JavaScript" type="text/JavaScript" src="jscript/vregistroent3.js?${sessionScope.VERSION_ASSETS}"></script>
 
 <link href="fisubice.css" type=text/css rel=stylesheet />
 <%
@@ -63,7 +63,7 @@ try
 {
 if (!(rif.getResp()==null))
 {
-%><div style="margin-bottom:4px; background-color: #9DD5EE; border-width: 12px; width: 90%; font-family: Verdana, Geneva, sans-serif; color: #003; text-align: left; height: 30px; vertical-align: middle;">
+%><div id="respuesta" style="margin-bottom:4px; background-color: #9DD5EE; border-width: 12px; width: 90%; font-family: Verdana, Geneva, sans-serif; color: #003; text-align: left; height: 30px; vertical-align: middle;">
 <%=rif.getResp()%>
 </div><br>
 <%}}catch(Exception er){}%>
@@ -168,3 +168,11 @@ if (!(rif.getResp()==null))
 	</fieldset>
 
 </html:form>
+<script>
+    $(document).ready(function () {
+        $('#centidad').change(function () {
+            $('#respuesta').html('');
+            $('#respuesta').hide();
+        });
+    });
+</script>
